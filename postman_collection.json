@@ -1,0 +1,86 @@
+{
+	"variables": [],
+	"info": {
+		"name": "auth-demo",
+		"_postman_id": "1183042d-f3ac-7e22-13d2-7d046fd3f97f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var bearier = postman.getResponseHeader(\"Authorization\");",
+							"postman.setGlobalVariable(\"authorization-header\", bearier);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://minikube.com/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdF91c2VyOjdlNDgyNzJiLWU0OGQtNDQyYS04ZjBmLWRjNjUyNmY2MjIwMg==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Main root",
+			"request": {
+				"url": "https://minikube.com",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "{{authorization-header}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

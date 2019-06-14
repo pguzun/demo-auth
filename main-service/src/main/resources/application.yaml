@@ -1,0 +1,11 @@
+signedjwt:
+  public:
+    key: '-----BEGIN PUBLIC KEY-----
+      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtp6prtYOmj/uY0/E/k/F
+      aW3lWiKRfkbzaeUbYDW5La4catbjZCMDSNevarfiswnQO7PxFI7YcnVfwrCjvlLl
+      IY6tV2AV0LBrg/9ih5Z/rovFAZeUloai8dXCJHqaOFLjOZygKHgISho5Z0oINOzD
+      /TY+1V9cGTYwg2zhO+ZdBK8p+7dGhV7eglqYNRDmqpS8NmFFMf67amTn7MhRfZTp
+      NX11xz27V7r37UhsNMdoUAzCW3+RK6QzbrKef06cY0sxB0Eagfnaipozlhp4j/Av
+      oEn6Jo9EKsA8fuoUaiRgmFMVsDJ7QBcHnqnCn1ZjExLdsmsopWJrTAI7VOOS9Cob
+      gQIDAQAB
+      -----END PUBLIC KEY-----'

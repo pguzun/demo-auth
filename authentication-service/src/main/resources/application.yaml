@@ -1,0 +1,54 @@
+signedjwt:
+  private:
+    key: '-----BEGIN RSA PRIVATE KEY-----
+      MIIEpAIBAAKCAQEAtp6prtYOmj/uY0/E/k/FaW3lWiKRfkbzaeUbYDW5La4catbj
+      ZCMDSNevarfiswnQO7PxFI7YcnVfwrCjvlLlIY6tV2AV0LBrg/9ih5Z/rovFAZeU
+      loai8dXCJHqaOFLjOZygKHgISho5Z0oINOzD/TY+1V9cGTYwg2zhO+ZdBK8p+7dG
+      hV7eglqYNRDmqpS8NmFFMf67amTn7MhRfZTpNX11xz27V7r37UhsNMdoUAzCW3+R
+      K6QzbrKef06cY0sxB0Eagfnaipozlhp4j/AvoEn6Jo9EKsA8fuoUaiRgmFMVsDJ7
+      QBcHnqnCn1ZjExLdsmsopWJrTAI7VOOS9CobgQIDAQABAoIBAGwcdfvJQY/TtT8Z
+      5Fdhxk7p/lNkD5ogSs4wEgrdAyml37DoUmnfyHwBJBobjpvLfXk6x8gR4NWx4uUR
+      SX7M+FTrcHc/rOqE5sGYGS6HzEL6/8A3ioGqZyCgGXUbF92sRFTBApeyp8WmzMD3
+      NPCQEl7/FCehcpaCXCoR9S1O7VZtlDCjhWCvqUojswPRa9DNSvwYIQy+/peot2xu
+      +O3w3Skylf1o51c2SVSfAgtybQFcE6XO1HKlODAy2bbUtqzSPyRJ4G2/FvTWJNpa
+      AeCFXxllS713YEmVHQya0RXz1f8W3IDxeaPWYrHdwCQyzXE0H6yDU8+16BTjmphX
+      /pv1UgECgYEA4ux9saQq0yFZgAjvAB+pg/uxLbrAeMX3SRdPC4yliycl6QaKzkT1
+      1raGC5gP4ec8CsDYl89Lia9dv0pczizNhmoAS/u3+hJShfhOnQ1OGh6nvHZXcyWR
+      PYXCm1djz4gPpzCLh54wU+4/mJM1XftPphdghD4zoOEBkhzy4aY3mjECgYEAzgTr
+      ml4722Jlhpq3eQXghMX4XJVlpKl5TjIBX52ZoqNb8xrxvJoCxGxE4w6gYBMpmkF3
+      fb0lMOWsgsRcpenkWV9rqhdbTU1lqa44aSv9UHaqMOVXComnkZogbZLv/tONt72m
+      U93Cth2Znne9nNOocuTAPOVHGaG0UoR58ZXQ8lECgYEAo/KCuXZHbnSYyhUqP6eg
+      fHe6wbQ8XMWCbK9Hb6u06r1k+V+9p1tRVkhWvkelqeu7iHVdxwiApcAqdgsO0/Kw
+      pp0tC7iYajcUojAM9BDpzZs6SsIhWlLZBV7/g+X2ebjuvjcnh9r1RZ5LGju5AeaQ
+      3AnltIWQHXqS/PKnU/oYD/ECgYEAnaikSGD++5ekTEsQRxxZQiJiOy/VNhq/izi3
+      Vl28GftbvYIMJqHRplGYsg4aawufFb4t3FqoIHBTAUuV/x4rsr1UHjl7lH+7YgvC
+      fbG9TBtTiNGpN5Y6VzGUyWXeJavt0wPeSmX1wPqL+fp2b5KGYU5vUuq+632VCmT5
+      EQjuetECgYAMEYUtLLB2QQHF1GGU05M62Lv85xcQEBgHa0s9tilalivM5fT3rMcJ
+      LblxdkATGod3cKrz8Py6VgjB+41mqT51/wZa8T1Ozjh+ywuwSjgr+haQaOED7rsl
+      pOWJHHBCYmSeuQEChxEf5lF5bln7X1lMmpD1RJDTekDwleE59rseQw==
+      -----END RSA PRIVATE KEY-----'
+  public:
+    key: '-----BEGIN PUBLIC KEY-----
+      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtp6prtYOmj/uY0/E/k/F
+      aW3lWiKRfkbzaeUbYDW5La4catbjZCMDSNevarfiswnQO7PxFI7YcnVfwrCjvlLl
+      IY6tV2AV0LBrg/9ih5Z/rovFAZeUloai8dXCJHqaOFLjOZygKHgISho5Z0oINOzD
+      /TY+1V9cGTYwg2zhO+ZdBK8p+7dGhV7eglqYNRDmqpS8NmFFMf67amTn7MhRfZTp
+      NX11xz27V7r37UhsNMdoUAzCW3+RK6QzbrKef06cY0sxB0Eagfnaipozlhp4j/Av
+      oEn6Jo9EKsA8fuoUaiRgmFMVsDJ7QBcHnqnCn1ZjExLdsmsopWJrTAI7VOOS9Cob
+      gQIDAQAB
+      -----END PUBLIC KEY-----'
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 464359906333-lrr69ut6mcudkhh2nrko5nki5dg081ng.apps.googleusercontent.com
+            client-secret: gcFKwedOm96eR1S2TV-l_sP-
+            authorization-grant-type: authorization_code
+            redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
+            scope: openid profile email
+            client-name: Google
+access-token:
+  validity-seconds: 1800

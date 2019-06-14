@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: main-service
+spec:
+  selector:
+      matchLabels:
+        app: main-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: main-service
+    spec:
+      containers:
+        - name: main-service
+          image: main-service:0.0.1
+          ports:
+            - containerPort: 8080
+

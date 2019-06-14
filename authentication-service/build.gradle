@@ -1,0 +1,29 @@
+plugins{
+    id 'org.springframework.boot' version '2.1.5.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+bootJar {
+   archiveFileName = 'authentication-service.jar'
+}
+
+dependencies  {
+    implementation 'org.springframework.boot:spring-boot-starter-web' 
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.security:spring-security-oauth2-client'
+    implementation 'org.springframework.security:spring-security-oauth2-jose'
+    implementation 'org.springframework.boot:spring-boot-devtools'
+
+    implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.1.5.RELEASE'
+    implementation 'com.google.guava:guava:26.0-jre'
+}
+
+apply from: '../gradle/docker.gradle'
